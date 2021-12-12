@@ -1,0 +1,41 @@
+@import '_variables.scss';
+
+@mixin buttonReset () {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+@mixin container {
+  max-width: 1352px;
+  padding-left: 31px;
+  padding-right: 31px;
+  margin: 0 auto;
+}
+
+@mixin button () {
+  background-color: $hoverColor;
+  padding: 15.5px 22px;
+  margin: 0;
+  border: none;
+  font-family: $fontRoboto;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: $lightText;
+  cursor: pointer;
+}
+
+@mixin buttonBorder () {
+  background-color: transparent;
+  padding: 12.5px 20px;
+  margin: 0;
+  border: 3px solid $hoverColor;
+  font-family: $fontRoboto;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: $lightText;
+  cursor: pointer;
+}

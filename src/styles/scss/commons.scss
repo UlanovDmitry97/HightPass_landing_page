@@ -1,0 +1,89 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+svg path {
+  fill: inherit;
+}
+
+.container {
+  @include container;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.section-title {
+  font-family: $fontTT;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.hashtag {
+  position: absolute;
+  padding: 7px 14px;
+  display: inline-block;
+  font-family: $fontRoboto;
+  font-size: 14px;
+  line-height: 1;
+  color: $lightText;
+  background-color: #333333;
+}
+
+@media (max-width: 1015px) {
+  .container {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  .hashtag {
+    padding: 3px 14px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

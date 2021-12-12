@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hight Pass</title>
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ttfirsneue-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ttfirsneue-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ttfirsneue-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer>
+  </script>
+  <script defer src="libraries/focus-visible.js"></script>
+  <script defer src="libraries/just-validate.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="wrapp">
+    <header class="header">
+      <a tabindex="-1" class="header__logo" href="#">
+        <img class="logo" src="images/logo.svg" alt="Логотип">
+      </a>
+
+      <nav class="nav header__nav">
+
+        <button aria-label="Бургер меню открыть" class="burger">
+          <span class="burger__item"></span>
+          <span class="burger__item"></span>
+          <span class="burger__item"></span>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__menu-close"></button>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">О студии</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Наши проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Мастер-классы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__menu-phone" href="tel:+749542423532">+7 (495) 42-423-532</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="socials">
+        <li class="socials__social">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon">
+              <use href="images/sprite.svg#inst" />
+            </svg>
+          </a>
+        </li>
+        <li class="socials__social">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon">
+              <use href="images/sprite.svg#fb" />
+            </svg>
+          </a>
+        </li>
+        <li class="socials__social">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon">
+              <use href="images/sprite.svg#vk" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <form action="/" class="search">
+        <button type="button" class="search__button">
+          <svg class="search__button-icon">
+            <use href="images/sprite.svg#search-icon" />
+          </svg>
+        </button>
+        <fieldset class="search__wrap">
+          <input class="search__input" type="search" placeholder="Что будем иcкать?">
+          <button type="button" class="search__close">
+          </button>
+        </fieldset>
+      </form>
+    </header>
+    <main class="main">
+      <section class="news">
+        <div class="container news__container">
+          <article class="banner">
+            <div class="banner__content">
+              <p class="banner__info">Мастер-класс от Игоря Робова</p>
+
+              <h3 class="banner__title">
+                <span class="banner__name">Неоновый фотосет 2.0</span>
+                <span class="banner__date">7 июля 20:00</span>
+              </h3>
+
+              <button class="banner__btn">Узнать больше</button>
+            </div>
+
+            <p class="hashtag banner__hashtag">#мастеркласс</p>
+          </article>
+
+          <article class="works">
+            <h3 class="works__title">Работы участников предыдущего мастер-класса</h3>
+
+            <div class="works__imgs">
+              <div class="works__img works__img_big"></div>
+              <div class="works__img works__img_1"></div>
+              <div class="works__img works__img_2"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container about-us__container">
+          <h2 class="section-title about-us__section-title">О студии</h2>
+
+          <p class="about-us__info">В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы,
+            инициированные исключительно синтетически,
+            ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная
+            концепция
+            общественного уклада требует от&nbsp;нас анализа соответствующих условий активизации! Следует отметить, что
+            семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов
+            и&nbsp;ресурсов.
+            Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований.
+            Повседневная
+            практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых
+            принципов
+            формирования материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные признаки
+            институционализации являются только методом политического участия и&nbsp;нарушающими общечеловеческие нормы
+            этики.</p>
+
+          <form autocomplete="on" action="https://jsonplaceholder.typicode.com/posts" method="POST"
+            class="about-us__form form-mailing">
+            <div class="form-mailing__visual"></div>
+
+            <fieldset class="form-mailing__fieldset">
+              <legend class="form-mailing__title">Подписаться на рассылку</legend>
+
+              <div class="form-mailing__inner">
+                <input class="form-mailing__email" type="email" placeholder="E-mail" data-validate-field="email">
+                <button type="submit" class="form-mailing__btn">Отправить</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <h2 class="section-title projects__title">Наши проекты</h2>
+
+          <ul class="projects__inner">
+            <li class="projects__project-card project-card-mini project-card-mini_landscape">
+              <div class="project-card-mini__img project-card-mini__img_landscape"></div>
+
+              <p class="project-card-mini__text project-card-mini__text_landscape">Синтетически, смешаны с не
+                уникальными данными до степени...</p>
+
+              <span class="project-card-mini__date">16 июня</span>
+
+              <p class="hashtag project-card-mini__hashtag">#пейзаж</p>
+            </li>
+
+            <li class="projects__project-card project-card-mini project-card-mini_portrait">
+              <div class="project-card-mini__img project-card-mini__img_portrait"></div>
+
+              <p class="project-card-mini__text project-card-mini__text_portrait">В своём стремлении улучшить опыт мы
+                упускаем, что явные...</p>
+
+              <span class="project-card-mini__date">28 мая</span>
+
+              <p class="hashtag project-card-mini__hashtag">#портрет</p>
+            </li>
+
+            <li class="projects__project-card project-card-mini project-card-mini_item">
+              <div class="project-card-mini__img project-card-mini__img_item"></div>
+
+              <p class="project-card-mini__text">Равным образом, высокое качество позиционных высокотехнологичная
+                концепция общественного уклада</p>
+
+              <span class="project-card-mini__date">14 мая</span>
+
+              <p class="hashtag project-card-mini__hashtag">#предмет</p>
+            </li>
+
+            <li class="project-card-big project-card-big_fuji">
+              <span class="project-card-big__date">9 апреля</span>
+
+              <h3 class="project-card-big__title">Cемантический разбор</h3>
+
+              <p class="project-card-big__text">В рамках спецификации современных стандартов, интерактивные прототипы
+              </p>
+
+              <button class="project-card-big__btn">О проекте</button>
+
+              <p class="hashtag project-card-big__hashtag">#fuji</p>
+            </li>
+
+            <li class="project-card-big project-card-big_oblivion">
+              <span class="project-card-big__date">20 марта</span>
+
+              <h3 class="project-card-big__title">Забвение</h3>
+
+              <p class="project-card-big__text">Играет важную роль в формировании глубокомысленных рассуждений
+              </p>
+
+              <button class="project-card-big__btn project-card-big__btn_oblivion">О проекте</button>
+
+              <p class="hashtag project-card-big__hashtag">#проектзабвение</p>
+            </li>
+
+            <li class="projects__project-card project-card-mini project-card-mini_rutsh">
+              <div class="project-card-mini__img project-card-mini__img_rutsh"></div>
+
+              <p class="project-card-mini__text project-card-mini__text_rutsh">Как принято считать, многие известные
+                личности и по сей день остаются
+                уделом либералов...</p>
+
+              <span class="project-card-mini__date">9 марта</span>
+
+              <p class="hashtag project-card-mini__hashtag">#ретушь</p>
+            </li>
+
+            <li class="projects__project-card project-card-mini project-card-mini_portrait2">
+              <div class="project-card-mini__img project-card-mini__img_portrait2"></div>
+
+              <p class="project-card-mini__text project-card-mini__text_portrait2">С учётом сложившейся международной
+                обстановки, новая модель
+                организационной...</p>
+
+              <span class="project-card-mini__date">1 марта</span>
+
+              <p class="hashtag project-card-mini__hashtag">#портрет</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container contacts__container">
+          <h2 class="section-title contacts__title">Контакты</h2>
+
+          <div class="contacts__inner">
+            <div id="map" class="map">
+              <div class="map-info">
+                <span class="map-info__name">Студия “High pass”</span>
+
+                <p class="map-info__location">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев
+                  Плаза&raquo;, этаж&nbsp;8,
+                  офис &#8470;&nbsp;82
+                  <a class="map-info__phone" href="tel:+749542423532">+7 (495) 42-423-532</a>
+                </p>
+
+                <button class="map-info__close"></button>
+              </div>
+            </div>
+
+            <form action="/" method="GET" class="contacts__application application">
+              <fieldset class="application__fieldset">
+                <legend class="application__title">Оставить заявку</legend>
+
+                <p class="application__text">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату
+                  съемки или другого мероприятия</p>
+
+                <label class="application__lable">
+                  <input required type="text" name="user_name" placeholder="Имя" data-validate-field="name"
+                    class="application__input">
+                </label>
+
+                <label class="application__lable">
+                  <input required type="email" name="user_email" placeholder="E-mail" data-validate-field="email"
+                    class="application__input">
+                </label>
+
+                <label class="application__lable">
+                  <textarea required name="user_massege" class="application__massege" placeholder="Комментарий"
+                    data-validate-field="message"></textarea>
+                </label>
+
+                <button class="application__btn">Отправить</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#" class="footer__logo-link">
+        <img class="logo footer__logo-img" src="images/logo.svg" alt="Логотип">
+        Фотостудия High pass® 2018-2021
+      </a>
+
+      <div class="footer__quote">
+        <blockquote class="footer__quote-text">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять
+          завтра.</blockquote>
+        <cite class="footer__quote-author">&copy;&nbsp;Имоджен Каннингем</cite>
+      </div>
+
+      <div class="footer__social">
+        <span class="footer__interesting">
+          Больше интересного:
+        </span>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <svg class="footer__social-icon">
+                <use href="images/sprite.svg#inst" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <svg class="footer__social-icon">
+                <use href="images/sprite.svg#fb" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
+              <svg class="footer__social-icon">
+                <use href="images/sprite.svg#vk" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

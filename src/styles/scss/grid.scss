@@ -1,0 +1,9 @@
+.wrapp {
+  min-height: 100vh;
+  display: grid;
+  grid-template: minmax(80px, auto) 1fr minmax(106px, auto) / 1fr;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+}

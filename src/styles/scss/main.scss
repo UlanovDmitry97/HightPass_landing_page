@@ -1,0 +1,29 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+@import 'news.scss';
+@import 'about-us.scss';
+@import 'projects.scss';
+@import 'contacts.scss';
+
+.main {
+  display: grid;
+  grid-area: main;
+  grid-template-rows: auto;
+  padding-top: 34px;
+  padding-bottom: 68px;
+  gap: 68px;
+}
+
+@media (max-width: 1015px) {
+  .main {
+      padding-top: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+    .main {
+      gap: 50px;
+      padding-top: 30px;
+      padding-bottom: 50px;
+  }
+}

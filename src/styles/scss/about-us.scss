@@ -1,0 +1,220 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.about-us {
+  grid-row: 2/4;
+  background-color: $darckBackground;
+
+    &__container {
+      padding-top: 30px;
+      padding-bottom: 70px;
+      display: grid;
+      grid-template: auto auto / repeat(2, 1fr);
+      gap: 0 30px;
+    }
+
+    &__section-title {
+      grid-column: 1/3;
+      margin-bottom: 2px;
+      color: $lightText;
+    }
+
+    &__info {
+      font-family: $fontRoboto;
+      font-size: 16px;
+      line-height: 28px;
+      color: $grayText;
+    }
+}
+
+  .form-mailing {
+
+      &__visual {
+      min-height: 255px;
+      margin-bottom: 23px;
+      background-image: url("images/form-visual.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &__fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      font-family: $fontTT;
+      font-size: 24px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $lightText;
+    }
+
+    &__email {
+      width: 75.5%;
+      padding-left: 23px;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      font-family: $fontRoboto;
+      font-size: 16px;
+      line-height: 19px;
+      color: $lightText;
+      border: none;
+      background-color: #4A4A4A;
+
+        &::placeholder {
+          font-family: $fontRoboto;
+          font-size: 16px;
+          line-height: 19px;
+          color: $grayText;
+          transition: color .4s ease-in-out;
+        }
+
+        &:hover::placeholder {
+          color: $hoverColor;
+        }
+
+        &.focus-visible {
+          outline: 1px solid $hoverColor;
+        }
+    }
+
+    &__inner {
+      position: relative;
+      display: flex;
+      gap: 20px 30px;
+    }
+
+    &__btn {
+      @include buttonReset();
+      @include button();
+
+        &:hover {
+          background-color: $focuseColor;
+        }
+
+        &.focus-visible {
+          outline: 3px solid #CE4307;
+        }
+
+        &:active {
+          background-color: $activeColor;
+          transition: background-color .0s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+  .about-us {
+      &__section-title {
+        margin-bottom: 4px;
+      }
+
+      &__container {
+        padding-bottom: 82px;
+      }
+  }
+
+  .form-mailing {
+
+      &__visual {
+        min-height: 332px;
+        margin-bottom: 21px;
+        background-image: url("images/form-visual-1024.jpg");
+        transform: translateY(-1px);
+      }
+
+      &__title {
+        transform: translateX(-2px);
+      }
+
+      &__inner {
+        flex-wrap: wrap;
+      }
+
+      &__email {
+        width: 73.5%;
+      }
+  }
+}
+
+@media (max-width: 1015px) {
+  .about-us__container {
+    padding-bottom: 62px;
+  }
+
+  .form-mailing {
+
+      &__visual {
+        min-height: 569px;
+        transform: translateY(-2px);
+        background-image: url("images/form-visual-768.jpg");
+      }
+
+      &__email {
+        width: 100%;
+      }
+  }
+}
+
+@media (max-width: 576px) {
+  .about-us {
+
+      &__info {
+        grid-column: 1/3;
+      }
+
+      &__section-title {
+        font-size: 18px;
+        line-height: 23px;
+      }
+
+      &__container {
+        padding-top: 32px;
+      }
+
+      &__info {
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 25px;
+      }
+  }
+
+  .form-mailing {
+    grid-column: 1/3;
+    margin-top: 18px;
+
+      &__visual {
+        min-height: 278px;
+        margin-bottom: 23px;
+        background-image: url("images/form-visual-320.jpg");
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      &__email {
+        padding-top: 11px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        line-height: 16px;
+
+          &::placeholder {
+            font-size: 14px;
+            line-height: 16px;
+          }
+      }
+
+      &__btn {
+        padding-top: 11.5px;
+        padding-bottom: 11.5px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+  }
+}
