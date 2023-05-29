@@ -24,6 +24,51 @@
   <script defer src="libraries/focus-visible.js"></script>
   <script defer src="libraries/just-validate.min.js"></script>
   <script defer src="app.js"></script>
+  <script async src="async.js" ></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => console.log("DOM готов!"));
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGBF87WZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PGBF87WZDM');
+  </script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(93758203, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/93758203" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <!-- Top.Mail.Ru counter -->
+  <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3346735", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+  </script>
+  <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3346735;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+  <!-- /Top.Mail.Ru counter -->
+
 </head>
 
 <body>
@@ -213,7 +258,7 @@
               <p class="project-card-big__text">В рамках спецификации современных стандартов, интерактивные прототипы
               </p>
 
-              <button class="project-card-big__btn">О проекте</button>
+              <button class="project-card-big__btn" onclick="ym(93758203,'reachGoal','click'); return true;">О проекте</button>
 
               <p class="hashtag project-card-big__hashtag">#fuji</p>
             </li>
@@ -226,7 +271,7 @@
               <p class="project-card-big__text">Играет важную роль в формировании глубокомысленных рассуждений
               </p>
 
-              <button class="project-card-big__btn project-card-big__btn_oblivion">О проекте</button>
+              <button class="project-card-big__btn project-card-big__btn_oblivion" onclick="ym(93758203,'reachGoal','click'); return true;">О проекте</button>
 
               <p class="hashtag project-card-big__hashtag">#проектзабвение</p>
             </li>
